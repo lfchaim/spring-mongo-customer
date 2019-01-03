@@ -3,4 +3,69 @@ Este projeto demonstra a integração do Spring Data com o MongoDB.
 
 ## MongoDB
 Neste exemplo foi utilizado o MongoDB com Docker. Para configurar o ambiente, acesse o link abaixo.  
-[MongoDB Docker Ubuntu!](http://maxidica.com/wp/mongodb-docker-ubuntu/)
+[MongoDB Docker Ubuntu](http://maxidica.com/wp/mongodb-docker-ubuntu/)  
+
+## POST
+URI: http://localhost:8080/customer  
+Method: POST  
+Body: JSON (application/json) - raw  
+JSON:  
+```
+{
+  "email": "john@com.com",
+  "name": "John Baker",
+  "address": [
+    {
+      "address": "Avenida Paulista",
+      "number": "2300",
+      "complement": "4 andar",
+      "zipCode": "01311-000"
+    },
+    {
+      "address": "Alameda Xingu",
+      "number": "512",
+      "complement": "25 andar",
+      "zipCode": "06455-914"
+    }
+  ]
+}
+```  
+
+## PUT
+URI: http://localhost:8080/customer  
+Method: PUT  
+Body: JSON (application/json) - raw  
+JSON:  
+```
+{
+  "id": "5c2e84ceaa60850bb2469e92",
+  "email": "john@com.com",
+  "name": "John Baker",
+  "address": [
+    {
+      "address": "Avenida Paulista",
+      "number": "2300",
+      "complement": "4 andar",
+      "zipCode": "01311-000"
+    },
+    {
+      "address": "Alameda Xingu",
+      "number": "512",
+      "complement": "25 andar",
+      "zipCode": "06455-914"
+    }
+  ]
+}
+```  
+
+## GET
+URI: http://localhost:8080/customer  
+Method: GET  
+
+## GET BY NAME
+URI: http://localhost:8080/customer/baker/name  
+Method: GET 
+
+## DELETE
+URI: http://localhost:8080/customer/5c2e84ceaa60850bb2469e92  
+Method: DELETE  
