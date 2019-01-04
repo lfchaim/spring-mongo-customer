@@ -1,12 +1,15 @@
 package com.lfchaim.springmongocustomer.repository;
 
-import java.util.List;
-
-import org.springframework.data.mongodb.repository.MongoRepository;
-
 import com.lfchaim.springmongocustomer.model.Customer;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import reactor.core.publisher.Flux;
 
-public interface CustomerRepository extends MongoRepository<Customer, String> {
+public interface CustomerRepository extends ReactiveMongoRepository<Customer, String> {
 
-	List<Customer> findByNameLikeIgnoreCase(String name);
+	Flux<Customer> findByNameLikeIgnoreCase(String name);
+
+	@Query("{ id: { $exists: true }}")
+	Flux<Customer> findAll(final Pageable page);
 }

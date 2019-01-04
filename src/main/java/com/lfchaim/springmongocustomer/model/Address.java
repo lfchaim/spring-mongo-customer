@@ -1,23 +1,21 @@
 package com.lfchaim.springmongocustomer.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document
 @Data
 public class Address {
 
-	@Id
-    private String id;
+  @Field("address")
+  private String address;
 
-    private String address;
-    
-    private String number;
-    
-    private String complement;
-    
-    private String zipCode;
-    
+  @Field("number")
+  private String number;
+
+  @Field("complement")
+  private String complement;
+
+  @Field("zipcode")
+  private String zipCode;
+
 }
