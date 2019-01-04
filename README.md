@@ -69,3 +69,34 @@ Method: GET
 ## DELETE
 URI: http://localhost:8080/customer/5c2e84ceaa60850bb2469e92  
 Method: DELETE  
+
+## MongoDB - Create User
+### Rodando a imagem Docker
+Digite o comando:  
+
+```
+sudo docker run --name testemongo -p 27017:27017 -d mongo
+```
+
+### Entrar no Docker
+```
+sudo docker exec -it testemongo /bin/bash
+```
+### Subindo o console do MongoDB
+Utilizando Docker, digite o comando:  
+
+```
+root@925d56e0031d:/# mongo
+```
+
+### Script para criar usuário do banco
+```
+db.createUser(
+   {
+     user: "root",
+     pwd: "root",
+     roles: [ { role: "userAdmin", db: "spring_mongo_customer" } ],
+     mechanisms: [ "SCRAM-SHA-1" ]
+   }
+)
+```
