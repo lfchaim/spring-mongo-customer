@@ -1,4 +1,4 @@
-# spring-mongo-customer
+# Spring Boot - MongoDB - Docker - Swagger - Customer POC
 Este projeto demonstra a integração do Spring Data com o MongoDB.
 
 ## MongoDB
@@ -59,7 +59,7 @@ JSON:
 ```  
 
 ## GET
-URI: http://localhost:8080/customer  
+URI: [http://localhost:8080/customer](http://localhost:8080/customer)  
 Method: GET  
 
 ## GET BY NAME
@@ -70,6 +70,10 @@ Method: GET
 URI: http://localhost:8080/customer/5c2e84ceaa60850bb2469e92  
 Method: DELETE  
 
+## Swagger UI
+URI: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)  
+  
+  
 ## MongoDB - Create User
 ### Rodando a imagem Docker
 Digite o comando:  
