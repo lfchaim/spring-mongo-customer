@@ -1,23 +1,27 @@
 package com.lfchaim.springmongocustomer.model;
 
 import java.util.List;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
 @Data
 public class Customer {
 
-	@Id
-    private String id;
+  @Id
+  @Indexed
+  private String id;
 
-    private String name;
-    
-    private String email;
-    
-    private List<Address> address;
-    
+  @Field("name")
+  private String name;
+
+  @Field("email")
+  private String email;
+
+  @Field("address")
+  private List<Address> address;
+
 }
