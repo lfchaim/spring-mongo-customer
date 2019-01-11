@@ -1,6 +1,6 @@
 package com.lfchaim.springmongocustomer.model;
 
-import org.springframework.data.mongodb.core.mapping.Field;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,18 +15,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Address {
+public class CustomerEvents {
 
-  @Field("address")
-  private String address;
-
-  @Field("number")
-  private String number;
-
-  @Field("complement")
-  private String complement;
-
-  @Field("zipcode")
-  private String zipCode;
-
+	private Customer model;
+	private Date when;
 }
