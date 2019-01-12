@@ -12,7 +12,7 @@
 
 	<groupId>com.lfchaim</groupId>
 	<artifactId>spring-mongo-customer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>spring-mongo-customer</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -73,7 +73,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.9.7</version>
+			<version>2.9.8</version>
 		</dependency>
 	</dependencies>
 

@@ -44,9 +44,11 @@ public class CustomerService {
 	public Mono<Customer> saveCustomer(Customer customerAdd) {
 		Mono<Customer> retVal = customerRepository.save(customerAdd);
 		String id = customerAdd.getId();
+/*
 		CustomerByName pojo = new CustomerByName(customerAdd.getName()+"_"+id,id);
 		Mono<CustomerByName> saved = customerByNameRepository.save(pojo);
 		System.out.println(saved.block().getName());
+*/
 		return retVal;
 	}
 
