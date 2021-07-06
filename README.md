@@ -104,3 +104,16 @@ db.createUser(
    }
 )
 ```
+### Criando imagem Docker
+Utilizando Docker, digite o comando:  
+
+```
+$ docker build -t myorg/myapp .
+```
+
+### Rodando a imagem Docker
+Digite o comando:  
+
+```
+$ docker run -p 8080:8080 myorg/myapp
+```

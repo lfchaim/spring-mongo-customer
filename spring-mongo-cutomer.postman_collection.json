@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "5a22c3ea-5f66-435e-83e7-a58a7da9cd83",
+		"name": "spring-mongo-cutomer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST John",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"john@com.com\",\n  \"name\": \"John Baker\",\n  \"address\": [\n    {\n      \"address\": \"Avenida Paulista\",\n      \"number\": \"2300\",\n      \"complement\": \"4 andar\",\n      \"zipCode\": \"01311-000\"\n    },\n    {\n      \"address\": \"Alameda Xingu\",\n      \"number\": \"512\",\n      \"complement\": \"25 andar\",\n      \"zipCode\": \"06455-914\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Mary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"mary@com.com\",\n  \"name\": \"Mary Baker\",\n  \"address\": [\n    {\n      \"address\": \"Avenida Paulista\",\n      \"number\": \"2300\",\n      \"complement\": \"4 andar\",\n      \"zipCode\": \"01311-000\"\n    },\n    {\n      \"address\": \"Alameda Xingu\",\n      \"number\": \"512\",\n      \"complement\": \"25 andar\",\n      \"zipCode\": \"06455-914\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer/82db8a4d-370e-412e-baa8-926ab0c2a116",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"82db8a4d-370e-412e-baa8-926ab0c2a116"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
